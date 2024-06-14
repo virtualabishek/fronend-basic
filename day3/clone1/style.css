@@ -6,3 +6,11 @@ ol {
     list-style: inside lower-roman;
 }
 
+table, th, td {
+    border: solid 1px;
+    width: 20%;
+    border-collapse: collapse;
+}
+th {
+    height: 70px;
+}
