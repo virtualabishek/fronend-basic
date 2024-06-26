@@ -1,6 +1,4 @@
-function add() {
-    document.getElementById("main").innerHTML=(3+4)
-}
+
 function addi() {
     alert(4+6)
 }
@@ -10,5 +8,10 @@ car.new = 2029;
 
 const person = new Object();
 person.name = "Abishek";
-person.address = "Gorkha"
+person.city = "Gorkha"
 person.age = 21;
+
+function add() {
+    document.getElementById("demo").innerHTML =
+person.name + "," + person.age + "," + person.city;
+}
