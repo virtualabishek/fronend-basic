@@ -2,15 +2,16 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  const name = "Abishek Neupane";
-
+  const namehandle = () => {
+    const name = ["Abishek", "Abinash", "Bhagawati"];
+    const newa = Math.floor(Math.random() * name.length);
+    return name[newa];
+  };
 
   return (
     <div className="appMain">
-      <img src ={logo} className='App-logo' 
-      alt="logo>"/>
-      <p>Learning HTML</p>
-      <p>{[1, 2, 3]}</p>
+      <p>Hello World!</p>
+      <p>Hello {namehandle()}</p>
     </div>
   );
 }
