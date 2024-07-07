@@ -1,0 +1,39 @@
+h1 {
+    color: red;
+}
+p, ul {
+    color: green;
+}
+
+li {
+    list-style-type: square;
+}
+
+.second {
+    color: purple;
+    font-size: 30px;
+}
+
+h1 + p {
+    font-size: 200%;
+}
+
+.unique {
+    color: black;
+    margin: 60px, 20px, 40px, 34px;
+}
+
+.padd{
+    color: purple;
+    padding: 70px 30px, 40px, 30px;
+    font-size: 200%;
+}
+.Playing {
+    height: 30px;
+    width: 400px;
+    padding: 50px;
+    margin: 20px;
+    border: 2px dotted ;
+    outline: solid red thin;
+    outline-offset: 10px;
+}
