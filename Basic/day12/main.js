@@ -1,15 +1,30 @@
-const myNumber = 10;
+//Lets Create a scissor papper rock!
 
+let computer = " ";
+let man = "papper";
 
-const myFlo = 39.32;
-console.log(myNumber)
+if ( computer === "rock" && man === "scissor") {
+    ans = "Computer Wins";
+}
+else if ( man === "rock" && computer === "scissor") {
+    ans = "Man wins";
+}
+else if (computer === "papper" && man ==="rock") {
+    ans = "Computer wins. ";
+} 
+else if (man === "papper" && computer ==="rock") {
+    ans = "Man wins. ";
+}
 
-console.log(myFlo)
+else if (man === "scissor" && computer === "papper"){
+    ans = "Man Wins";
+}
 
-console.log( myNumber === 10)
+else if (computer === "scissor" && man === "papper"){
+    ans = "Computer Wins";
+}
 
-const myString = "5221"
-console.log(Boolean(false))
-
-console.log("Hello WOrld!")
-
+else {
+    ans = "Tie"
+}
+console.log(ans)

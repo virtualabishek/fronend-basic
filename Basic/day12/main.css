@@ -5,7 +5,7 @@
 }
 
 html, body {
-    width: 100%;
+    width: 101%;
     font-size: 16px;
     background-color: #000;
     color: #fff;
@@ -20,5 +20,5 @@ main {
 }
 
 h1 {
-    font-size: 250%;
+    font-size: 250%                                         ;
 }
