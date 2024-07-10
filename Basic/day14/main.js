@@ -1,13 +1,17 @@
-const band = {
-    vocals: "Robert Plant", 
-    guitar: "Jimmy Page",
-    bass: "John Paul Jones",
-    drums: "John Bonham"
-};
+// Javascript Classes :)
 
-// Destructure Objects
 
-const {vocals, guitar, bass, drumns} = band;
+class Pizza {
+    constructor(pizzaType) 
+    {
+        this.type = pizzaType;
+        this.size = "Medium";
+        this.crust = "Original"
+    }
+    bake() {
+        console.log(`Baking ${this.size}, ${this.type} ${this.crust} crust pizza.`);
+    }
+}
 
-console.log(vocals)
-console.log(guitar)
+const myPizza = new Pizza("papperoni");
+myPizza.bake()
