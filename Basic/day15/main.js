@@ -1,19 +1,22 @@
-class Pizza {
-    constructor(pizzaType, pizzaSize) {
-        this.type = pizzaType;
-        this.size = pizzaSize;
-        this.crust = "Original"
+// Javascript Object Notation
+
+//Lets create one object!
+
+const myObj = {
+    name: "Abishek",
+    hobbies: ["code", "read", "coffee"],
+    hello: function() {
+        console.log(`Hello! This is ${this.name}`);
     }
-    get pizzaCrust(pizzaCrust) {
-        return this.crust;
-    }
+};
+
+console.log(myObj)
+console.log(myObj.name)
+myObj.hello()
+console.log(typeof(myObj))
 
 
-    bake() {
-        console.log(`Baking a ${this.size} size ${this.type}  pizza on ${this.crust}`);
-    }
-}
-const myPizza = new Pizza("Butter", "Small");
-myPizza.bake();
+const sendJSON = JSON.stringify(myObj);
+console.log(sendJSON);
+  
 
-console.log(myPizza.type)
