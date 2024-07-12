@@ -49,3 +49,25 @@ console.log(evenDivs[0].parentElement.firstElementChild);
 console.log(evenDivs[0].nextSibling);
 console.log(evenDivs[0].nextElementSibling);
 
+view1.style.display="none";
+view2.style.display = "flex";
+view2.style.flexDirection = "row";
+view2.style.flexWrap = "row";
+view2.style.margin =  "10px"
+
+
+while(view2.lastChild){
+    view2.lastChild.remove();
+}
+
+
+const createDivs = (parent, iter) => {
+    const newDiv = document.createElement("div");
+    newDiv.textContent = iter;
+    newDiv.style.width = "100px";
+    newDiv.style.margin = "10px"
+    parent.append(newDiv)
+}
+
+/* createDivs(view2, 10)
+ */
