@@ -11,3 +11,6 @@ const doSomethings = () => {
 }
 
 h2.addEventListener("click", doSomethings, false)
+
+
+/This is all about Elite
