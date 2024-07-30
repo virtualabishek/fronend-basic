@@ -38,11 +38,11 @@ currentVisitor = "Shyam"
 let srtingDataType = "Hey! I am a string."
 let numberDataType = 234;
 
-console.log(srtingDataType)
+/* console.log(srtingDataType)
 console.log(numberDataType)
 console.log(4/0)
 console.log("Not a number" / 7)
-
+ */
 // for bigInt just use n at last of the number
 
 let str1 = "Hello!"
@@ -58,5 +58,29 @@ alert(age) */
 
 //Homework
 
-let userName = prompt("Enter your name!", "Abishek Neupane")
-alert(`Your name is: ${userName}`)
+/* let userName = prompt("Enter your name!", "Abishek Neupane")
+alert(`Your name is: ${userName}`) */
+/* 
+let value = true;
+alert(typeof value);
+
+change = String(value)
+alert(typeof change) */
+/* 
+alert(Boolean(23)) */
+
+/* x = 10;
+ x = -x;
+ console.log(x)
+
+ str1 = "Abishek" + "Neupane"
+
+ console.log(str1)
+
+ alert (1+'3')
+ alert('1' + 3)
+ alert(1+1+'3') */
+
+ alert(2>4)
+
+ alert(4<6)
