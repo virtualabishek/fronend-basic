@@ -50,5 +50,13 @@ let str2 = "Abishek"
 let str3 = "Namaste"
 let str4 = `${str1} ${str2} :)) ${str3} `;
 
+/* let age = prompt("How old are you?", 18)
+alert(`You are ${age} old.`) */
 
-result = prompt(title, [default]);
+/* let age = confirm("Are you sure more than 18?")
+alert(age) */
+
+//Homework
+
+let userName = prompt("Enter your name!", "Abishek Neupane")
+alert(`Your name is: ${userName}`)
