@@ -39,8 +39,10 @@ print`I need to do:
 ${todos}
 My current progress is: ${progress}`;
 
-print(["I need to do:\n", "\nMy current progress is: ", "\n"], todos, progress);
+print(["I need to do:\n", "\nMy crrent progress is: ", "\n"], todos, progress);
 console.log("I need to do:\n%o\nMy current progress is: %o\n", todos, progress);
 
 
+
+// Life is boring . 
 
