@@ -1,1 +1,8 @@
-console.log("Checking")
+console.log("Checking");
+
+let i = 0;
+
+while(i<=3) {
+    console.log(i);
+    i++;
+}
