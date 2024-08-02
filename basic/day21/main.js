@@ -73,9 +73,102 @@ function makeUserID(name, age) {
     };
 }
 
-let user2 = makeUserID("Abishek", 21);
-let user3 = makeUserID("Abinash", 28);
-let user4 = makeUserID("Bhagawati", 50)
+// let user2 = makeUserID("Abishek", 21);
+// let user3 = makeUserID("Abinash", 28);
+// let user4 = makeUserID("Bhagawati", 50)
 
-console.log(user2.name)
-console.log(user4.name)
+// console.log(user2.name)
+// console.log(user4.name)
+// console.log(user2);
+
+// console.log(user3);
+// console.log(user4);
+
+
+// Objects can be used the reserved words.
+
+// let obj = {
+//     for: 1,
+//     let: 2, 
+//     return: 3 
+// }
+
+// console.log(obj.for + obj.let + obj.return)
+
+
+// let user = {
+//     name: "Abishek",
+//     sem: "4th",
+//     roll: 1
+// }
+
+// // console.log( 4 in user);
+
+// for (let key in user) {
+//     console.log(key);
+//     console.log(user[key]);
+// }
+
+
+
+
+
+// Solution :)
+
+// let user = {
+//     name: "John",
+//     surname: "Smith",
+// }
+
+// user.name = "Pete"
+
+// delete user.name;
+
+//Solution - 2
+
+
+// function isEmpty(obj) {
+//     for (let key in obj) {
+//         return true;
+//     }
+//     return false;
+// }
+
+// Solution - 3
+
+// let salaries = {
+//     John: 100,
+//     Ann: 160,
+//     Pete: 130
+//   }
+// //   Write the code to sum all salaries and store in the variable sum. Should be 390 in the example above.
+  
+// //   If salaries is empty, then the result must be 0.
+
+// let sum = 0;
+// for ( keys in salaries) {
+//     sum = sum + salaries[keys]
+ 
+// }
+// console.log(sum)
+
+// // Objects keeps reference not like primitive data types,
+
+// let user = { name: "John"};
+// let admin = user;
+
+// user.name = "Abishek";
+
+// // console.log(admin.name);
+
+// let user = {name: "Abishek"};
+
+// let canEditPermission = { canEdit: true};
+// let canViewPermission = {canView: false};
+
+// Object.assign(user, canEditPermission, canViewPermission);
+// console.log(user.canEditPermission);
+// console.log(user.canViewPermission);
+
+
+// Garbage collection
