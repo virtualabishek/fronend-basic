@@ -172,3 +172,44 @@ function makeUserID(name, age) {
 
 
 // Garbage collection
+
+
+// Object this :)
+
+// let user = {
+//     name: "Abishek",
+//     role: "Software Devloper",
+//     age: 21
+// };
+
+// user.sayHi = function() {
+//     alert("Hello");
+// };
+
+// user.sayHi();
+
+
+// a function that is property of object is called method. 
+
+// let user1 = {
+//     sayHi() {
+//         alert("I am sayinh, HIIII!");
+//     }
+// };
+
+
+// Using this. 
+
+let user = {
+    name: "Abishek",
+    age: 21,
+    sayHi() {
+        alert(this.name);
+    }
+};
+
+user.sayHi()
+
+
+
+
