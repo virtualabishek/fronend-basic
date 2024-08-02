@@ -57,3 +57,25 @@
 // console.log(DOB);
 
 
+// let fruit = prompt("Enter the fruitd: ", "apple");
+
+// let bag = {
+//     [fruit]: 5
+// }
+
+// alert(bag.apple)
+
+
+function makeUserID(name, age) {
+    return {
+        name: name,
+        age: age
+    };
+}
+
+let user2 = makeUserID("Abishek", 21);
+let user3 = makeUserID("Abinash", 28);
+let user4 = makeUserID("Bhagawati", 50)
+
+console.log(user2.name)
+console.log(user4.name)
