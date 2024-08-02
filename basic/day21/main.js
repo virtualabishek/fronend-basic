@@ -33,3 +33,27 @@
 // console.log(user["like birds"]);
 
 // asking input from user and making a 
+
+
+
+// let user = {
+//     national: "Nepal.",
+//     language: "Nepali",
+//     age: 34
+// }
+
+// askName = prompt("Hey, bro! Enter your name.", "Abishek Neupane")
+// askDateOfBirth = prompt("Hey, bro! Enter your DOB.", 2004)
+
+
+// // user.name = askName;
+// // user.DOB = askDateOfBirth;
+
+// user[askName];
+// user[askDateOfBirth];
+
+// console.log(user)
+// console.log(name);
+// console.log(DOB);
+
+
