@@ -200,16 +200,79 @@ function makeUserID(name, age) {
 
 // Using this. 
 
+// let user = {
+//     name: "Abishek",
+//     age: 21,
+//     sayHi() {
+//         alert(this.name);
+//     }
+// };
+
+// user.sayHi()
+
+// new - constructor
+
+// function User(name) {
+//     this.name = name;
+//     this.isAdmin = false;
+// };
+
+// let user = new User("Jack");
+
+// console.log(User(name))
+
+
+// returning-> constructor doesnt return -> just, this.
+
+// function BigUser() {
+//     this.name = "Abishek";
+//     return {name: "Godzilla"}
+// }
+
+// console.log(new BigUser().name)
+
+// function User(name){
+//     this.name = name;
+//     this.sayHi = function() {
+//         console.log(`Hi! ${this.name}`);
+//     };
+// }
+
+// let abi = new User("Abishek");
+// abi.sayHi()
+
+
+// let user = {};
+// console.log(user.address ? user.address.street : undefined)
+
+
+// console.log(user?.address?.street);
+
+// let key = "firstName";
+
+// let user1 = {
+//     firstName: "John"
+// };
+
+// let user2 = null;
+
+// delete user1?.name;
+
+// alert(user1?.[key]);
+// alert(user2?.[key]);
+
+// Symbols 
+
+// let id = Symbol("id");
+// // alert(id.toString());
+// alert(id.description);
+
 let user = {
-    name: "Abishek",
-    age: 21,
-    sayHi() {
-        alert(this.name);
-    }
+    name: "john"
 };
 
-user.sayHi()
+let id = Symbol("id");
 
+user[id] =  1;
 
-
-
+alert(user[id]);
