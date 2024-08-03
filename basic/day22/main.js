@@ -50,4 +50,23 @@ console.log(num4.toString(2));
 
 // Rounding
 
+num5 = 23.2323213;
+console.log(Math.round(num5 * 100 )/ 50);
+
+
+console.log(0.1.toString(2));
+
+let sum = 0.1 + 0.2 + 0.3;
+console.log(sum.toFixed(1));
+
+
+console.log(parseInt('100px'))
+console.log(parseFloat('34.54em'));
+
+console.log(Math.random().toFixed(2))
+
+console.log("Hello".length)
+
+string1 = "Abishek";
+console.log(string1[3])
 
