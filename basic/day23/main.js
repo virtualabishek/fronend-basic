@@ -121,4 +121,113 @@ let json = JSON.stringify(student1);
 console.log(typeof json);
 console.log(json);
 
+function pow(x,n){
+  let result = 1;
+  for(i=1; i<=n; i++){
+    result=result*x;
+  }
+  return result;
+}
+console.log(pow(2,3))
+
+function pow1(x,n){
+  if(n==1){
+    return x;
+  } else {
+    return x*pow1(x,n-1)
+  }
+}
+
+console.log(pow1(2,3))
+
+
+function pow2(x,n){
+  return (n==1) ? x: pow2(x,n-1);
+}
+
+let company = {
+  sales: [{
+    name: "Abishek",
+    salary: 1000 
+  }, {
+    name: "Abinash",
+    salary: 1600
+  }],
+
+  development: {
+    sites:[{
+      name:"abishekn.com.np",
+      salary: 2000
+    }, {
+      name:"abinashneupane.com.np",
+      salary: 1500
+    }],
+    internals: [{
+      name: "Abi",
+      salary: 2300
+    }]
+  }
+};
+
+function sumSalaries(department){
+  if(Array.isArray(department)){
+    return department.reduce((prev, current) =>
+    prev+current.salary, 0);
+  } else {
+    let sum =0;
+    for (let subdep of Object.values(department)){
+      sum=sum+sumSalaries(subdep)
+    }
+    return sum;
+  }
+}
+
+console.log(sumSalaries(company))
+
+
+// Rest parameter and spread Syntax
+
+// function add(...args) {
+//   for (let arg of args) sum = sum + arg;
+//   return sum;
+// }
+
+// console.log(add(1,2,3,4,5))
+
+
+// Global Object
+
+let func6 = new Function ('a', 'b','return a+b')
+
+console.log(func6(2,4))
+
+
+// function blinding
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
