@@ -1,11 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
-import Footer from './component/Footer';
-import Intro1 from './component/Intro1';
-import Nav from './component/Nav';
-import Promo from './component/Promo';
-function App() {
-  return;
+function ProfileHero() {
+    return(
+        <img src="https://i.imgur.com/MK3eW3As.jpg"
+        alt = "My favoriate"/>
+    );
 }
 
-export default App;
+export default function App() {
+    return(
+        <>
+        <h1>Amazing Scientist</h1>
+        <ProfileHero/>
+        <ProfileHero/>
+        <ProfileHero/>
+        </>
+    );
+}
