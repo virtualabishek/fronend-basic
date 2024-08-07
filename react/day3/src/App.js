@@ -30,13 +30,63 @@ export function Bio() {
   );
 }
 
-// displaying time
+// displaying day of week.
+const today = new Date;
+function formatDate(date) {
+  return new Intl.DateTimeFormat(
+    'en-US',
+    {weekday: 'long'}
+  ).format(date);
+}
+//changing the background using some simple CSS theme property.
+const userDetail = {
+  name: "Abishek",
+  theme: {
+    backgroundColor: 'black',
+    color: 'pink'
+  }
+};
+
+export function TodoList() {
+  return (
+    <div style={userDetail.theme}>
+      <h1>{userDetail.name} ToDo's</h1>
+      <img src="https://i.imgur.com/7vQD0fPs.jpg" alt="A photo" 
+      />
+    <ui>
+      <li>Learning React to become a pro</li>
+      <li>Main target on backend. </li>
+    </ui>
+    </div>
+  );
+}
+
+//Passing props to a component.]
+
+function Avatar(person, size)  {
+  return (
+    <img
+    src="https://i.imgur.com/1bX5QH6.jpg"
+    alt="Lin Lanying"
+    width={100}
+    height={100}
+    />
+  );
+}
 
 export default function App() {
   return (
     <>
     <MyButton/>
     <Bio />
+    <p>Hello! Todays day is: {formatDate(today)}</p>
+    <TodoList/>
+    <p>Passing props to a component.</p>
+    <Avatar
+    person={{name: "Lin Lanying", imnageId: '1bX5QH6'}}
+    size= {100}
+    />
     </>
   );
 }
+
