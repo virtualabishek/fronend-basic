@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { getImageUrl } from "./utils";
 
 //Checking Onclic ...
 
@@ -74,6 +75,18 @@ function Avatar(person, size)  {
   );
 }
 
+function Pic({person, size}){
+  return (
+    <img src={getImageUrl(person)}
+    alt={person.name}
+    width={size}
+    height={size}
+     />
+  );
+}
+
+
+
 export default function App() {
   return (
     <>
@@ -86,7 +99,31 @@ export default function App() {
     person={{name: "Lin Lanying", imnageId: '1bX5QH6'}}
     size= {100}
     />
+    
+    <p>Okey. New Start</p>
+    <Pic
+    size = {100}
+    person = {{
+      bane: "Akilu Lemma",
+      imnageId: 'OKS67lh'
+    }}
+    />
+    <Pic
+    size = {80}
+    person = {{
+      name: "Lin Lanying",
+      imnageId:'1bX5QH6'  
+    }}
+    />
+    <Pic 
+    size = {50}
+    person = {{
+    name: 'Katsuko Saruhashi', 
+    imageId: 'YfeOqp2'
+    }}
+    />
     </>
   );
 }
+
 
