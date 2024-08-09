@@ -1,3 +1,15 @@
+function Item({ name, isPacked }) {
+  return (
+    <li>
+      {isPacked ? (
+        <del>{name + "/"}</del>
+      ) : (
+        name
+      )}
+    </li>
+  );
+}
+
 export function PackingList() {
   return (
     <section>
@@ -20,12 +32,11 @@ export function PackingList() {
   );
 }
 
-
 export default function App() {
   return (
     <>
-    <h1>Day 4 - Going</h1>
-    PackingList
+      <h1>Day 4 - Going</h1>
+      <PackingList />
     </>
   );
 }
