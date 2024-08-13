@@ -19,15 +19,67 @@ export function Practice3({var3}){
     <h3>Day will be {var3} times better tomorrow.</h3>
   );
 }
+export function Practice4() {
+  function handleClick() {
+    alert("You clicked me.")
+  }
+  return(
+    <>
+    <button onClick={handleClick}>I do nothing.</button>
+    </>
+  );
+}
+export function Practice5({message, children}){
+  return(
+    <>
+    <button onClick={()=> alert(message)}>
+    {children}
+    </button>
+    </>
+  );
+}
+// Passing prop from children to parent
+function Practice6({onClick, children}){
+  return(
+    <button onClick={onClick}>{children}</button>
+  );
+}
+function Practice7({movieName}){
+  function handlePlayClick(){
+    alert("Playing ${movieName}");
+  }
+  return(
+    <Practice6 onClick={handlePlayClick}>Play "{movieName}"</Practice6>
+  );
+}
+function UploadButton(){
+  return(
+    <>
+    <Practice6 onClick={()=> alert('Uploading!')}>
+    Upload Image.
+    </Practice6>
+    </>
+  );
+}
 export default function App() {
+  let cash = [];
+    for( var i =1; i <= 5; i++ ) {
+      cash.push(<Practice3 key={i} var3={i}/>);
+    }
   return (
     <>
+    {cash}
     <Practice1 var1={2}/>
     <Practice2 var2={1}/>
     <Practice2 var2={2}/>
     <Practice2 var2={3}/>
-    let var = [];
-    
+    <Practice4/> <br/><br/>
+    <Practice5 message={"Playing."}>
+    Play a movie.
+    </Practice5>
+    <Practice5 message={"Uploading"}>Upload a image.</Practice5>
+    <Practice7 movieName={"Inteseler"}/>
+    <UploadButton/>
     </>
   );
 }
