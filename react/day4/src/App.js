@@ -83,6 +83,7 @@ export function Practice8(){
         Play Movie
         </Button1>
       <Button1 onClick={() => alert(`Uploading.`)}>
+        Upload Image
       </Button1>
     </div>
   );
@@ -106,7 +107,7 @@ export default function App() {
     <Practice5 message={"Uploading"}>Upload a image.</Practice5>
     <Practice7 movieName={"Inteseler"}/>
     <UploadButton/>
-
+    <Practice8/>
     </>
   );
 }
