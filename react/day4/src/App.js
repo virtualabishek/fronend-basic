@@ -1,3 +1,5 @@
+import { render } from "@testing-library/react";
+
 export function Practice1({var1}) {
 return(
     <>
@@ -46,7 +48,7 @@ function Practice6({onClick, children}){
 }
 function Practice7({movieName}){
   function handlePlayClick(){
-    alert("Playing ${movieName}");
+    alert(`Playing ${movieName}`);
   }
   return(
     <Practice6 onClick={handlePlayClick}>Play "{movieName}"</Practice6>
@@ -59,6 +61,30 @@ function UploadButton(){
     Upload Image.
     </Practice6>
     </>
+  );
+}
+
+function Button1({onClick, children}){
+  render(
+    <button onClick={e => {
+      e.stopPropagation();
+      onClick();
+    }}>
+      {children}
+    </button>
+  );
+}
+
+export function Practice8(){
+  return(
+    <div className="ToolBar" onClick={()=>{ alert('You clicked on the tool bar');
+    }}>
+      <Button1 onClick={() => alert("Playing!")}>
+        Play Movie
+        </Button1>
+      <Button1 onClick={() => alert(`Uploading.`)}>
+      </Button1>
+    </div>
   );
 }
 export default function App() {
@@ -80,6 +106,7 @@ export default function App() {
     <Practice5 message={"Uploading"}>Upload a image.</Practice5>
     <Practice7 movieName={"Inteseler"}/>
     <UploadButton/>
+
     </>
   );
 }
