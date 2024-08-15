@@ -1,25 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+// Render and commit the changes
 
-function App() {
+export function Clock({time}){
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Current Time: {time}</h1>
     </div>
   );
 }
+export function Form() {
+  const [isSent, setIsSent] = useState(false);
+  const [message, setMessage] = useState("Hi!");
+  if(isSent){
+    return <h1>Your message is on its way.</h1>
+  }
+  return (
+    <>
+    <h4>Form</h4>
+    <form onSubmit={(e) => {
+      e.preventDefault();
+      setIsSent(true);
+      setMessage(message);
+    }}>
+      <textarea name="name" id="name"
+      placeholder="Message"
+      value={message}
+      onChange={(e)=> setMessage(e.target.value)}>
+        
+      </textarea><br></br>
+      <button type="submit">Send</button>
+    </form>
+    </>
+  );
+}
 
-export default App;
+export default function App(){
+  return (
+    <>
+    <Form/>
+    </>
+  );
+}
