@@ -105,7 +105,49 @@ let initialShapes = [
       </>
     );
   }
-  
+//Inserting the data;
+
+let newId = 3;
+
+const collectionArtists = [
+    {id: 0, name: "Abishek Neupane"},
+    {id: 1, name: "Abinash Neupane"},
+    {id: 2, name: "Bhagawati Neupane"}
+];
+
+export function List3(){
+  const [name, setName] = useState('');
+  const [artists, setArtists] = useState (
+    collectionArtists
+  );
+  function handleClick(){
+    const insertAt = 1;
+    const nextArtists = [
+      ...artists.slice(0,insertAt),
+      {id: newId++, name: name},
+      ...artists.slice(insertAt)
+    ];
+    setArtists(nextArtists)
+    setName('');
+  }
+  return (
+    <>
+    <h1>Inspiring Person</h1>
+    <input type="text"
+    value={name}
+    onChange={e => setName(e.target.value)}
+    />
+    <button onClick={handleClick}>Insert</button>
+    <ul>
+      {artists.map(artist =>(
+        <li key={artist.id}>{artist.name}</li>
+      ))}
+    </ul>
+    </>
+  );
+}
+
+
 
 export default function App() {
     return(
@@ -113,6 +155,7 @@ export default function App() {
         <List/>       
         <List1/>       
         <ShapeEditor/>
+        <List3/>
         </>
     );
 }
