@@ -1,6 +1,6 @@
 import { type } from "@testing-library/user-event/dist/type";
 import { useState } from "react";
-let nextId = 0;
+let nextId1 = 0;
 export function List(){
     const [name, setName] = useState(' ');
     const[artists, setArtists] = useState([]);
@@ -10,7 +10,7 @@ export function List(){
     <button onClick={()=>{
         setArtists([
             ...artists,
-            {id: nextId++, name: name}
+            {id: nextId1++, name: name}
         ]);
     }} >Add</button>
     <ul>
@@ -147,15 +147,111 @@ export function List3(){
   );
 }
 
+//Reversing the array
 
+const reverseList = [
+  {id: 1, title: "The life journey of Abhi."},
+  {id: 2, title: "The life journey of Abi."},
+  {id: 3, title: "The life journey of Bhagawat."}
+];
 
+export function ReverseMe() {
+  const [list, setList] = useState(reverseList);
+  function handleClick() {
+    const nextList = [...list];
+    nextList.reverse();
+    setList(nextList);
+    }
+    return(<>
+      <button onClick={handleClick}>Reverse</button>
+      <ul>
+        {list.map(collec=>(
+          <li key={collec.id}>{collec.title}</li>
+        ))}
+      </ul>
+    </>);
+}
+
+// Updating objects inside arrays
+
+let nextId = 3;
+const initialList = [
+  { id: 0, title: 'Big Bellies', seen: false },
+  { id: 1, title: 'Lunar Landscape', seen: false },
+  { id: 2, title: 'Terracotta Army', seen: true },
+];
+
+export function BucketList() {
+  const [myList, setMyList] = useState(initialList);
+  const [yourList, setYourList] = useState(
+    initialList
+  );
+
+  function handleToggleMyList(artworkId, nextSeen) {
+    const myNextList = [...myList];
+    const artwork = myNextList.find(
+      a => a.id === artworkId
+    );
+    artwork.seen = nextSeen;
+    setMyList(myNextList);
+  }
+
+  function handleToggleYourList(artworkId, nextSeen) {
+    const yourNextList = [...yourList];
+    const artwork = yourNextList.find(
+      a => a.id === artworkId
+    );
+    artwork.seen = nextSeen;
+    setYourList(yourNextList);
+  }
+
+  return (
+    <>
+      <h1>Art Bucket List</h1>
+      <h2>My list of art to see:</h2>
+      <ItemList
+        artworks={myList}
+        onToggle={handleToggleMyList} />
+      <h2>Your list of art to see:</h2>
+      <ItemList
+        artworks={yourList}
+        onToggle={handleToggleYourList} />
+    </>
+  );
+}
+
+function ItemList({ artworks, onToggle }) {
+  return (
+    <ul>
+      {artworks.map(artwork => (
+        <li key={artwork.id}>
+          <label>
+            <input
+              type="checkbox"
+              checked={artwork.seen}
+              onChange={e => {
+                onToggle(
+                  artwork.id,
+                  e.target.checked
+                );
+              }}
+            />
+            {artwork.title}
+          </label>
+        </li>
+      ))}
+    </ul>
+  );
+}
 export default function App() {
     return(
         <>
         <List/>       
         <List1/>       
-        <ShapeEditor/>
+        {/* <ShapeEditor/> */}
         <List3/>
+        <ReverseMe/>
+        <BucketList/>
         </>
     );
 }
