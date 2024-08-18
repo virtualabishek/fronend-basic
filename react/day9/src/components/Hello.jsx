@@ -1,7 +1,11 @@
-function Hello() {
-    return (
-        <h1>Hello from Component.</h1>
-    )
+function Hello(personDetails) {
+  return (
+    <div>
+      <h1>
+        Hello:: {personDetails.name}!{personDetails.emoji}
+        {personDetails.message} <br /> {personDetails.seatNumbers}
+      </h1>
+    </div>
+  );
 }
-
-export default Hello
+export default Hello;

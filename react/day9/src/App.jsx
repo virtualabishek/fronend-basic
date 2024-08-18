@@ -1,11 +1,15 @@
-//jsx on new version
 import Hello from "./components/Hello";
-const name = "Abishek";
+
 function App() {
+  const personDetails = {
+    name: "Bhagawati",
+    message: "hi There!",
+    emoji: "❤️",
+    seatNumbers: [1, 2, 4],
+  };
   return (
     <>
-      <div className="App">Hello, {name}</div>
-      <Hello />
+      <Hello personDetails={personDetails} />
     </>
   );
 }
