@@ -10,9 +10,12 @@ export default function Fruits() {
   return (
     <div>
       <ul>
-        <li>{fruits.map((fruit) => {
-          {}
-        })}</li>
+        <li>
+          {fruits.map((fruit) => {
+            {
+            }
+          })}
+        </li>
       </ul>
     </div>
   );
