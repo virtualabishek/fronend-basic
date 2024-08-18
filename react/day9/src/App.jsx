@@ -1,15 +1,10 @@
 import Hello from "./components/Hello";
-
+import Fruits from "./components/Fruits";
+import ConditionRen from "./components/ConditionalRen";
 function App() {
-  const personDetails = {
-    name: "Bhagawati",
-    message: "hi There!",
-    emoji: "❤️",
-    seatNumbers: [1, 2, 4],
-  };
   return (
     <>
-      <Hello personDetails={personDetails} />
+      <Fruits />
     </>
   );
 }
