@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Arithmetic Calculation</title>
+    <script>
+      let a, b;
+
+      function getValues() {
+        a = parseFloat(document.getElementById("num1").value);
+        b = parseFloat(document.getElementById("num2").value);
+      }
+
+      function addMe() {
+        getValues();
+        let result = a + b;
+        document.getElementById("answer").value = result;
+      }
+
+      function multiplyMe() {
+        getValues();
+        let result = a * b;
+        document.getElementById("answer").value = result;
+      }
+    </script>
+  </head>
+  <body style="background-color: skyblue">
+    <form>
+      <label for="num1">Enter the First Number :</label>
+      <input type="number" id="num1" /> <br /><br />
+      <label for="num2">Enter the Second Number :</label>
+      <input type="number" id="num2" /> <br />
+      <hr />
+      <button type="button" onclick="addMe()">Add</button>
+      <button type="button" onclick="multiplyMe()">Multiply</button>
+      <input type="number" name="answer" id="answer" />
+    </form>
+  </body>
+</html>

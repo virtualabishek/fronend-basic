@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>Arithmetic Calculation</title>
+    <script>
+      function addMe() {
+        let a = parseFloat(document.getElementById("num1").value);
+        let b = parseFloat(document.getElementById("num2").value);
+        let result = a + b;
+        document.getElementById("answer").value = result;
+      }
+
+      function multiplyMe() {
+        let a = parseFloat(document.getElementById("num1").value);
+        let b = parseFloat(document.getElementById("num2").value);
+        let result = a * b;
+        document.getElementById("answer").value = result;
+      }
+    </script>
+  </head>
+  <body style="background-color: skyblue">
+    <form>
+      <label for="num1">Enter the First Number :</label>
+      <input type="number" id="num1" /> <br /><br />
+      <label for="num2">Enter the Second Number :</label>
+      <input type="number" id="num2" /> <br />
+      <hr />
+      <button type="button" onclick="return addMe()">Add</button>
+      <button type="button" onclick="return multiplyMe()">Multiply</button>
+      <input type="number" name="answer" id="answer" />
+    </form>
+  </body>
+</html>
