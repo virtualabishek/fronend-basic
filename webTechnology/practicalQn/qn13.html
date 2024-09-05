@@ -1,0 +1,27 @@
+<!-- 9. Write a JavaScript and HTML code to display the Fibonacci series up to 20th term  -->
+<html>
+  <head>
+    <title>Fibonacci Series</title>
+  </head>
+  <body>
+    <h2>Fibonacci Series up to 20th term:</h2>
+    <p id="fibonacciSeries"></p>
+
+    <script>
+      const number = 20;
+      let n1 = 0,
+        n2 = 1,
+        nextTerm;
+      let series = "";
+
+      for (let i = 1; i <= number; i++) {
+        series += n1 + "\n";
+        nextTerm = n1 + n2;
+        n1 = n2;
+        n2 = nextTerm;
+      }
+
+      document.getElementById("fibonacciSeries").innerText = series;
+    </script>
+  </body>
+</html>

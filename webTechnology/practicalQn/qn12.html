@@ -1,32 +1,38 @@
 <!-- 7. Write a JavaScript and HTML code to enter a number and display whether it is prime or not.  -->
 <html>
   <head>
-    <title>Program to check prime Number</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prime Number Checker</title>
     <script>
       function checkPrime() {
-        let a = parseInt(document.getElementById("num1").value);
+        let number = parseInt(document.getElementById("num1").value);
         let primeNumber = true;
-        for (let i = 2; i <= a; i++) {
-          if (a % i == 0) {
+        if (isNaN(number) || number <= 1) {
+          document.getElementById("result").innerText =
+            "Please enter a number greater than 1.";
+          return;
+        }
+        for (let i = 2; i < number; i++) {
+          if (number % i === 0) {
             primeNumber = false;
             break;
           }
         }
         if (primeNumber) {
-          result = "The Number is prime.";
+          document.getElementById("result").innerText = "The Number is prime.";
         } else {
-          result = "The Number is not prime.";
+          document.getElementById("result").innerText =
+            "The number is not prime.";
         }
-        console.log(result);
-        document.getElementById("result").innerText = result;
       }
     </script>
   </head>
   <body>
-    <form>
+    <form onsubmit="return false;">
       <label for="num1">Enter a number: </label>
-      <input type="number" name="num1" id="num1" /> <br />
-      <button onclick="checkPrime()">Check</button>
+      <input type="number" id="num1" />
+      <button type="button" onclick="checkPrime()">Check</button>
       <p id="result"></p>
     </form>
   </body>
