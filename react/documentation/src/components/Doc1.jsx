@@ -1,13 +1,16 @@
+// Remember something what user did before
+import { useState } from "preact/hooks";
 export default function Doc1() {
+  const [count, setCount] = useState(0);
   const user = {
     name: "XYZ Thaxaina",
     imageUrl: "https://i.imgur.com/yXOvdOSs.jpg",
     imageSize: 90,
   };
   const products = [
-    { title: "Cabbage", id: 1 },
-    { title: "Garlic", id: 2 },
-    { title: "Apple", id: 3 },
+    { title: "Coffee", id: 1 },
+    { title: "Chess", id: 2 },
+    { title: "Code", id: 3 },
   ];
   const listItems = products.map((product) => {
     return <li key={product.id}>{product.title}</li>;
@@ -31,9 +34,11 @@ export default function Doc1() {
       </li>
     );
   });
+  function handleClick() {
+    setCount(count + 1);
+  }
   return (
     <>
-      <button>I am a button </button>
       <hr />
       <h1>{user.name}</h1>
       <img
@@ -48,6 +53,7 @@ export default function Doc1() {
       <hr />
       {/* <div>{isLoggedIn ? <Home /> : <Signup />}</div> */}
       <div>
+        <h3>Things i love</h3>
         <ul>{listItems}</ul>
       </div>
       <hr />
@@ -55,6 +61,9 @@ export default function Doc1() {
       <div>
         <ol>{single}</ol>
       </div>
+      <hr />
+      <button onClick={handleClick}>I am a button. </button>
+      <p>You clicked me {count} times.</p>
     </>
   );
 }
