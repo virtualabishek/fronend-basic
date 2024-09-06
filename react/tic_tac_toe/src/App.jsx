@@ -1,36 +1,34 @@
 import "./App.css";
+import { useState } from "react";
 
 export default function App() {
+  const [square, setSquare] = useState(Array(9).fill(null));
+  // ['O', null, 'X', 'X', 'X', 'O', 'O', null, null] example
   return (
     <>
       <div className="board-row">
-        <Square value={1} />
-        <Square value={2} />
-        <Square value={3} />
+        <Square value={square[0]} />
+        <Square value={square[1]} />
+        <Square value={square[2]} />
       </div>
       <div className="board-row">
-        <Square value={4} />
-        <Square value={5} />
-        <Square value={6} />
+        <Square value={square[3]} />
+        <Square value={square[4]} />
+        <Square value={square[5]} />
       </div>
       <div className="board-row">
-        <Square value={7} />
-        <Square value={8} />
-        <Square value={9} />
+        <Square value={square[6]} />
+        <Square value={square[7]} />
+        <Square value={square[8]} />
       </div>
     </>
   );
 }
 
 function Square({ value }) {
-  function handleClick() {
-    console.log("Clicked.");
-  }
   return (
     <>
-      <button className="square" onClick={handleClick}>
-        {value}
-      </button>
+      <button className="square">{value}</button>
     </>
   );
 }
