@@ -1,4 +1,12 @@
 <?xml version="1.0"?>
 <main>
 <heading>Entity References</heading>
+<one>My Salary is less than &lt; 20000</one>
+<two>My brother salary is more than &gt; 30000 </two>
+<!-- 
+&lt;	<	less than
+&gt;	>	greater than
+&amp;	&	ampersand 
+&apos;	'	apostrophe
+&quot;	"	quotation mark -->
 </main>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<main>
+    <heading>Just Looking XML Attributes</heading>
+
+
+<person gender="male">
+    <name>Abishek</name>
+</person>
+
+</main>
