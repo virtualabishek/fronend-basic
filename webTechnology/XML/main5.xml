@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<root>
-    <a:person>
-        hi
-    </a:person>
-</root>
+<a:root xmlns:a="http://example.com/a" xmlns:b="http://example.com/b">
+    <a:table>
+        <a:tr>
+            <a:th>Mom</a:th>
+            <a:td>Brother</a:td>
+        </a:tr>
+    </a:table>
+    
+    <b:table>
+        <b:name>
+            <b:mom>Bhagawati</b:mom>
+            <b:dai>Abinash</b:dai>
+        </b:name>
+    </b:table>
+</a:root>
