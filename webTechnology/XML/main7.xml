@@ -1,1 +1,27 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
+<!DOCTYPE address [
+    <!ELEMENT address (name, email, phone, birthday)>
+    <!ELEMENT name (first,last)>
+    <!ELEMENT first (#PCDATA)>
+    <!ELEMENT last (#PCDATA)>
+    <!ELEMENT email (#PCDATA)>
+    <!ELEMENT phone (#PCDATA)>
+    <!ELEMENT birthday (year, month, day)>
+    <!ELEMENT year (#PCDATA)>
+    <!ELEMENT month (#PCDATA)>
+    <!ELEMENT day (#PCDATA)>
+]>
+
+<address>
+    <name>
+        <first>Abishek</first>
+        <last>Neupane</last>
+    </name>
+    <email>717abishekneupane@gmail.com</email>
+    <phone>9862681874</phone>
+    <birthday>
+        <year>2004</year>
+        <month>August</month>
+        <day>31</day>
+    </birthday>
+</address>
