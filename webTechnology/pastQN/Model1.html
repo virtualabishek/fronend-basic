@@ -3,16 +3,17 @@
     <title>Test</title>
     <style>
       table,
-      tr,
-      th,
-      td {
+      td,
+      th {
         border: 2px black solid;
+        border-collapse: collapse;
+        padding: 10px;
       }
     </style>
   </head>
   <body>
     <div id="dv1">
-      <table rospan="3" colspan="" 3>
+      <table>
         <tr>
           <th>Title</th>
           <th>Page</th>
@@ -23,7 +24,7 @@
           <td>200</td>
           <td>140</td>
         </tr>
-        <tr>
+        <tr rospan="3">
           <td>Hello</td>
           <td>100</td>
           <td>300</td>
