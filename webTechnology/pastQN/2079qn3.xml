@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- What is the meaning of extensible in XML? Mention the XML 
+ naming rules. Create an XML file containing an empty element 
+ with content, element with element, and element with attribute.
+  Now write equivalent DTD. -->
+
+<bookstore> 
+    <book>
+        <!-- Empty element with content -->
+        <title></title>
+    </book>
+    <!-- element with element -->
+     <author>
+        <first_name>Abishek</first_name>
+        <last_name>Neupane</last_name>
+     </author>
+     <!-- element with attribute -->
+      <book id="102">
+        <title>Hello C</title>
+        <price>2999.99</price>
+      </book>
+</bookstore>
