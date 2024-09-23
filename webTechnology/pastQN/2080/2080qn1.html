@@ -9,10 +9,11 @@
       }
       table,
       th,
-      tr {
+      tr,
+      td {
         border: 2px solid black;
         border-collapse: collapse;
-        flex-directi;
+        padding: 5px;
       }
     </style>
   </head>
@@ -24,10 +25,32 @@
           <tr>
             <th>Fruits</th>
             <th>Name</th>
-            <th>Address</th>
+            <th><i>Address</i></th>
+          </tr>
+          <tr>
+            <td>
+              <ol>
+                <li>Apple</li>
+                <li>Banana</li>
+              </ol>
+            </td>
+            <td>Ram</td>
+            <td>
+              <ul>
+                <li>Nepal</li>
+                <li>India</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td rowspan="2">Watermelon<sup>23</sup></td>
+            <td>Sita</td>
+            <td rowspan="2">Hello</td>
+            <td></td>
           </tr>
         </table>
       </div>
     </div>
+    <img src="./output.png" alt="" />
   </body>
 </html>
