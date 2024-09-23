@@ -1,0 +1,38 @@
+<!-- Write a CSS script to illustrate the concept of Normal Box Layout and Basic Box Layout. -->
+<html>
+  <head>
+    <title>Normal & Basic Box Model</title>
+    <style>
+      .normal_box {
+        margin: 20px;
+        border: 2px solid black;
+        padding: 20px;
+        width: 50%;
+      }
+      .main_box {
+        width: 75%;
+        background-color: aqua;
+        padding: 40px;
+        margin: 30px;
+        border: 4px red solid;
+      }
+      .inherit_box {
+        margin: 15px;
+        width: 50%;
+        padding: 20px;
+        margin: 15px;
+        border: 2px solid gray;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="normal_box">
+      <p>This is just a normal box.</p>
+    </div>
+    <br />
+    <!-- For a Basic Box -->
+    <div class="main_box">
+      <div class="inherit_box">Box 2</div>
+    </div>
+  </body>
+</html>
