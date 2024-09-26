@@ -1,0 +1,28 @@
+<!-- Write HTML script to show the use of Video and Canvas elements. -->
+<html>
+  <head>
+    <title>Canva and Video elements</title>
+  </head>
+  <body>
+    <h1>Video</h1>
+    <video width="400" controls>
+      <source src="./video.mp4" type="video/mp4" />
+      Video is not supported
+    </video>
+    <canvas
+      id="firstCanvas"
+      width="250"
+      height="175"
+      style="border: 1px solid blue"
+    >
+      Canvas is not supported.
+    </canvas>
+  </body>
+  <script>
+    const canvas = document.getElementById("firstCanvas");
+    const ctx = canvas.getContext("2d");
+    ctx.moveTo(0, 0);
+    ctx.lineTo(250, 175);
+    ctx.stroke();
+  </script>
+</html>
