@@ -15,17 +15,32 @@
       width="100"
       style="border: 1px solid black"
     ></canvas>
+    <canvas
+      id="drawCircle"
+      height="200"
+      width="150"
+      style="border: 1px solid black"
+      >Your browser doesnt support canvas.</canvas
+    >
   </body>
   <script>
     const canvas = document.getElementById("firstCanvas");
     const ctx = canvas.getContext("2d");
-    ctx.fillstyle = "red";
+    ctx.fillStyle = "red";
     ctx.fillRect(0, 0, 75, 75);
     // for second canvas.
     const canvas2 = document.getElementById("secondCanvas");
-    const ctx2 = canvas.getContext("2d");
+    const ctx2 = canvas2.getContext("2d");
 
     ctx2.moveTo = (0, 0);
     ctx2.lineTo = (150, 100);
+    ctx2.stroke();
+
+    // for making a circle.
+    const canvas3 = document.getElementById("drawCircle");
+    const ctx3 = canvas3.getContext("2d");
+    ctx3.beginPath();
+    ctx3.arc(50, 50, 20, 0, 2 * Math.PI);
+    ctx3.stroke();
   </script>
 </html>
