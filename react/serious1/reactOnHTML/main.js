@@ -1,3 +1,4 @@
+import { man, hero } from "./sample";
 class Man {
   constructor(name) {
     this.brand = name;
@@ -52,4 +53,16 @@ const [add, subtract, multiply, divide] = calculate(4, 7);
 
 // console.log(calculate());
 
-con;
+const numOne = [1, 2, 3];
+const numTwo = [4, 5, 6];
+
+const combineNum = [...numOne, ...numTwo];
+console.log(combineNum);
+
+const [one, two, ...rest] = numbers;
+
+const man1 = man;
+const hero2 = hero;
+
+console.log(man1);
+console.log(hero2);
