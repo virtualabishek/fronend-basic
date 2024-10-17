@@ -12,14 +12,14 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   </head>
   <body>
-    <div class="my-div"></div>
+    <div id="my-div"></div>
     <script type="text/babel">
       function Hello() {
         return <h1>Hello World!</h1>;
       }
       const container = document.getElementById("my-div");
-      const Root = ReactDOM.createRoot("container");
-      Root.render(<Hello />);
+      const root = ReactDOM.createRoot(container);
+      root.render(<Hello />);
     </script>
   </body>
 </html>
