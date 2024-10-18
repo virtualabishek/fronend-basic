@@ -4,7 +4,7 @@
 --email, phoneNo, class, attendance. 
 
 CCREATE TABLE Student (
-    student_id INT PRIMARY KEY AUTO_INCREMENT,
+    student_id INT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
     address VARCHAR(255),
     email VARCHAR(100) NOT NULL,
