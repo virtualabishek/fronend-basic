@@ -1,2 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- 21. Illustrate the concept of XSD indicators with examples -->
+
+<xs:schema xmlns:xs="https://www.w3.org/2001/XMLSchema">
+<xs:element name = "sample">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="name" type="xs:string" />
+            <xs:element name="phone" type="xs:string" minOccurs="1" maxOccurs="3" />
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+</xs:schema>
