@@ -1,0 +1,77 @@
+<!-- 32. Display the contents of experiment no 26 on a table using XSLT.
+ -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+    
+    <xsl:output method="html" encoding="UTF-8" indent="yes"/>
+
+    <xsl:template match="/form">
+        <html>
+            <head>
+                <title>Email Validation Form</title>
+                <style>
+                    table {
+                        width: 50%;
+                        border-collapse: collapse;
+                    }
+                    table, th, td {
+                        border: 1px solid black;
+                    }
+                    th, td {
+                        padding: 10px;
+                        text-align: left;
+                    }
+                </style>
+            </head>
+            <body>
+                <h2>Email Validation Details</h2>
+                <table>
+                    <tr>
+                        <th>Element</th>
+                        <th>Attribute</th>
+                        <th>Value</th>
+                    </tr>
+                    <!-- Displaying emailField attributes -->
+                    <xsl:for-each select="emailField">
+                        <tr>
+                            <td>emailField</td>
+                            <td>id</td>
+                            <td><xsl:value-of select="@id"/></td>
+                        </tr>
+                        <tr>
+                            <td>emailField</td>
+                            <td>type</td>
+                            <td><xsl:value-of select="@type"/></td>
+                        </tr>
+                        <tr>
+                            <td>emailField</td>
+                            <td>required</td>
+                            <td><xsl:value-of select="@required"/></td>
+                        </tr>
+                    </xsl:for-each>
+                    
+                    <!-- Displaying submitButton attributes -->
+                    <xsl:for-each select="submitButton">
+                        <tr>
+                            <td>submitButton</td>
+                            <td>onclick</td>
+                            <td><xsl:value-of select="@onclick"/></td>
+                        </tr>
+                    </xsl:for-each>
+
+                    <!-- Displaying resultField attributes -->
+                    <xsl:for-each select="resultField">
+                        <tr>
+                            <td>resultField</td>
+                            <td>id</td>
+                            <td><xsl:value-of select="@id"/></td>
+                        </tr>
+                    </xsl:for-each>
+                </table>
+            </body>
+        </html>
+    </xsl:template>
+
+</xsl:stylesheet>
