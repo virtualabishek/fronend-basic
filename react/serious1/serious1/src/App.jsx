@@ -1,14 +1,7 @@
-import Serious from "./components/Serious";
-import "./App.css";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import React from "react";
 
-function App() {
-  return (
-    <>
-      {/* Using Props 
-    <Serious color="red" />*/}
-    </>
-  );
-}
+const App = () => {
+  return <div>App</div>;
+};
 
 export default App;
