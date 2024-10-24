@@ -1,27 +1,48 @@
-import React from 'react'
+import React, { useState } from 'react';
 
 export default function Content() {
-    const handleNameChange = () => {
-        const names = ["Abinash", "Abishek", "Mom"];
-        const int = Math.floor(Math.random() * 3);
-        return names[int]
-    }
+    const [items, setItems] = useState([
+        {
+            id: 1, 
+            checked: false,
+            item: "To bring a bag."
+        },
+        {
+            id:2,
+            checked: false,
+            item: "To buy a laptop Wrapper."
+        }, 
+        {
+            id: 3,
+            checked: false,
+            item: "A new clothes."
 
-    function handleClick() {
-        console.log("you clicked me.")
-    }
+        }
+    ]);
+    // const [count, setCount] = useState(0);
 
-    const handleClick3 = (e) => {
-        console.log(e.target.innerText)
-    }
+    // const handleNameChange = () => {
+    //     const names = ["Abinash", "Abishek", "Mom"];
+    //     const int = Math.floor(Math.random() * names.length);
+    //     setName(names[int]);
+    // };
+
+    // const handleClick = () => {
+    //     setCount(count+1)
+    //     console.log(count);
+    // };
+
+    // const handleClick3 = (e) => {
+    //     console.log(e.target.innerText);
+    // };
 
     return (
         <main>
-            <p onDoubleClick={handleClick} > Hello {handleNameChange()} </p>
-            <button onClick={handleClick()} >Click It</button>
-            <button onClick={() => handleClick2("Abishek")} >Click It</button>
-            <button onClick={(e) => handleClick3(e)} >Click It</button>
-            {/* <button onClick={("Abi") => console.log(`${name} was clicked.`)} >Hey Inline function</button> */}
+            {/* <p onDoubleClick={handleClick}>Hello {name}!</p>
+            <button onClick={handleNameChange}>Change Name</button>
+            <button onClick={handleClick}>Click It</button>
+            <button onClick={(e) => handleClick(e)}>Click It</button> */}
+
         </main>
     );
 }
