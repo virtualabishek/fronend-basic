@@ -1,58 +1,65 @@
-import React, { useState } from 'react';
-import { FaTrashAlt } from 'react-icons/fa'
+import React, { useState } from "react";
+import { FaTrashAlt } from "react-icons/fa";
 
 export default function Content() {
-    const [items, setItems] = useState([
-        {
-            id: 1,
-            checked: true,
-            item: "To bring a bag."
-        },
-        {
-            id: 2,
-            checked: false,
-            item: "To buy a laptop Wrapper."
-        },
-        {
-            id: 3,
-            checked: false,
-            item: "A new clothes."
+  const [items, setItems] = useState([
+    {
+      id: 1,
+      checked: true,
+      item: "To bring a bag.",
+    },
+    {
+      id: 2,
+      checked: false,
+      item: "To buy a laptop Wrapper.",
+    },
+    {
+      id: 3,
+      checked: false,
+      item: "A new clothes.",
+    },
+  ]);
 
-        }
-    ]);
-    // const [count, setCount] = useState(0);
+  const handleCheck = (id) => {
+    console.log(`key: ${id}`);
+  };
 
-    // const handleNameChange = () => {
-    //     const names = ["Abinash", "Abishek", "Mom"];
-    //     const int = Math.floor(Math.random() * names.length);
-    //     setName(names[int]);
-    // };
+  // const [count, setCount] = useState(0);
 
-    // const handleClick = () => {
-    //     setCount(count+1)
-    //     console.log(count);
-    // };
+  // const handleNameChange = () => {
+  //     const names = ["Abinash", "Abishek", "Mom"];
+  //     const int = Math.floor(Math.random() * names.length);
+  //     setName(names[int]);
+  // };
 
-    // const handleClick3 = (e) => {
-    //     console.log(e.target.innerText);
-    // };
+  // const handleClick = () => {
+  //     setCount(count+1)
+  //     console.log(count);
+  // };
 
-    return (
-        <main>
-            {/* <p onDoubleClick={handleClick}>Hello {name}!</p>
+  // const handleClick3 = (e) => {
+  //     console.log(e.target.innerText);
+  // };
+
+  return (
+    <main>
+      {/* <p onDoubleClick={handleClick}>Hello {name}!</p>
             <button onClick={handleNameChange}>Change Name</button>
             <button onClick={handleClick}>Click It</button>
             <button onClick={(e) => handleClick(e)}>Click It</button> */}
-            <ul>
-                {items.map((item) => (
-                    <li className='item' key={item.id}>
-                        <input type="checkbox"
-                            checked={item.checked} />
-                        <label>{item.item}</label>
-                        <FaTrashAlt role='button' tabIndex="0" />
-                    </li>
-                ))}
-            </ul>
-        </main>
-    );
+      <ul>
+        {items.map((item) => (
+          <li className="item" key={item.id}>
+            <input
+              type="checkbox"
+              checked={item.checked}
+              onChange={() => handleCheck(item.id)}
+            />
+            <label>{item.item}</label>
+            <FaTrashAlt role="button" tabIndex="0" />
+          </li>
+        ))}
+      </ul>
+    </main>
+  );
 }
