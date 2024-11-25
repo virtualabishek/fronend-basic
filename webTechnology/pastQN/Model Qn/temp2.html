@@ -1,0 +1,73 @@
+<html>
+  <head>
+    <title>Seminar Schedule</title>
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        text-align: center;
+        padding: 8px;
+        margin: auto;
+        border-collapse: collapse;
+      }
+
+      .yellow {
+        background-color: yellow;
+      }
+      .green {
+        background-color: green;
+      }
+      .purple {
+        background-color: purple;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td colspan="4">Seminar</td>
+      </tr>
+      <tr>
+        <td rowspan="2">Day</td>
+        <td colspan="2">Schedule</td>
+        <td rowspan="2">Topic</td>
+      </tr>
+      <tr>
+        <td>Begin</td>
+        <td>End</td>
+      </tr>
+      <tr>
+        <td rowspan="2">Monday</td>
+        <td rowspan="2" class="yellow">8:00 am</td>
+        <td rowspan="2" class="purple">5:00 pm</td>
+        <td>Introduction to XML</td>
+      </tr>
+      <tr>
+        <td>Validity: Dtd and relax Ng</td>
+      </tr>
+      <tr>
+        <td rowspan="3">Tuesday</td>
+        <td class="yellow">8:00 am</td>
+        <td class="yellow">11:00 am</td>
+        <td colspan="2">XPath</td>
+      </tr>
+      <tr>
+        <td class="yellow">11:00 am</td>
+        <td class="green">2:00 pm</td>
+        <td class="no-border"></td>
+      </tr>
+      <tr>
+        <td class="green">2:00 pm</td>
+        <td class="purple">5:00 pm</td>
+        <td colspan="2">Transformations</td>
+      </tr>
+      <tr>
+        <td>Wednesday</td>
+        <td class="yellow">8:00 am</td>
+        <td class="green">12:00 pm</td>
+        <td>XSL Formatting Objects</td>
+      </tr>
+    </table>
+  </body>
+</html>
