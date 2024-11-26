@@ -1,0 +1,130 @@
+Bikram Magar
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YouTube-like Layout</title>
+    <style>
+      /* Basic reset and layout styles */
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      /* Main container for the page */
+      .container {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+      }
+
+      /* Header similar to YouTube header */
+      .header {
+        background-color: #333;
+        color: white;
+        padding: 15px;
+        text-align: center;
+        position: relative;
+        /*For positioning other elements relative to the header */
+      }
+
+      /* Navigation bar in the header */
+      .nav-bar {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: #555;
+        padding: 5px 10px;
+        border-radius: 5px;
+      }
+
+      .nav-bar a {
+        color: white;
+        text-decoration: none;
+        padding: 5px 10px;
+      }
+
+      /* Main content area */
+      .main-content {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 20px;
+        gap: 20px;
+        justify-content: space-between;
+      }
+
+      /* Video card styles */
+      .video-card {
+        width: 300px;
+        height: 180px;
+        background-color: #ccc;
+        border-radius: 10px;
+        position: relative;
+        /* Relative to contain the absolute play button */
+      }
+
+      /* Absolute play button inside the video card */
+      .play-button {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      /* Footer section */
+      .footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- YouTube-like Header with a Navigation bar -->
+      <div class="header">
+        <h1>YouTube</h1>
+        <div class="nav-bar">
+          <a href="#">Home</a>
+          <a href="#">Trending</a>
+          <a href="#">Subscriptions</a>
+        </div>
+      </div>
+
+      <!-- Main Content with Video Cards -->
+      <div class="main-content">
+        <!-- Video card 1 -->
+        <div class="video-card">
+          <div class="play-button">Play</div>
+        </div>
+        <!-- Video card 2 -->
+        <div class="video-card">
+          <div class="play-button">Play</div>
+        </div>
+        <!-- Video card 3 -->
+        <div class="video-card">
+          <div class="play-button">Play</div>
+        </div>
+        <!-- More video cards can be added here -->
+      </div>
+
+      <!-- Footer -->
+      <div class="footer">
+        <p>© 2024 YouTube</p>
+      </div>
+    </div>
+  </body>
+</html>
