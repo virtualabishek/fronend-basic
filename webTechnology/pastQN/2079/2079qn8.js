@@ -1,4 +1,5 @@
-// Write a JavaScript function that will include the variable having values number 5 and character ‘5’ and print the variables.
+:x:c
+:c
 
 function callMe(integer, character) {
   console.log(integer);
