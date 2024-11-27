@@ -1,0 +1,52 @@
+<html>
+	<head>
+		<title>Form Validation</title>
+	</head>
+	<body>
+		<form onsubmit = "return validateForm()"> {
+			<label for "text">Text</label>
+			<input type="text" id="text" name= "text"/>
+			<br/> </br>
+			<label for "pwd">Password</label>
+                        <input type="password" id="pwd" name= "pwd"/>
+                        <br/> </br>
+			<!--Just taking Hobbies as a radio-->
+			<label for = "hobby">Hobbies</label>
+                        <input type="radio" id="h1" name= "h1" value="h1"/>
+			<label for="h1">Coding</label> 
+                        <input type="radio" id="h2" name= "h2" value="h2"/>
+			<label for="h2">Singing</label>
+                        <input type="radio" id="h3" name= "h3" value="h3"/>
+                        <label for="h3">Dancing</label>
+                        <br/> </br>
+ 			<!--Just taking Fav Destination as a checkbox-->
+                        <label for = "destination">Hobbies</label>
+                        <input type="checkbox" id="d1" name= "d1" value="d1"/>
+                        <label for="d1">Pokhara</label>
+                        <input type="checkbox" id="d2" name= "d2" value="d2"/>
+                        <label for="d2">Chitwan</label>
+                        <input type="radio" id="d3" name= "d3" value="d3"/>
+			<label for="d3">Kathmandu</label> <br/> <br/>
+			<!--Using Fav Subject as a select-->
+			<label for =  "sub">Select a fav subject:</label>
+			<select name = "subs" id="subs" >
+				<option value ="sub1">WT</option>
+				<option value = "sub2">AI</option>
+				<option value = "sub3">OR</option>
+			</select> <br/> <br/>
+			<button type="submit">Submit</buton>
+		</form>
+	</body>
+	<script>
+		function validateForm(){
+					const pwd = document.getElementById("pwd").value;
+					const pwsRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)/;
+					if ( !pwsRegex.test(pwd) && pwd <=6 ) {
+								alert("Invalid Password");
+								return false;
+							}
+					return true;
+				}
+	</script>
+</html>
+
