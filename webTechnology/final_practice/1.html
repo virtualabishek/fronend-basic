@@ -1,0 +1,48 @@
+<!DOCTYPE>
+<html lang="en">
+	<head>
+		<title>Form Validation</title>
+	</head>
+	<body>
+		<h1>Form Validation</h1>
+		<form onsubmit = "return validateMe()">
+			<label for = "mail">Enter mail:</label>
+			<input type = "email" id = "mail" name="email" />
+			<br/>
+			<br/>
+			<label for = "pwd">Enter Password: </label>
+			<input type = "password" id="pwd" name="pwd">
+			<br/> <br/>
+			<label for = "hobbies">Hobbies:</label>
+			<input type="radio" value="code" name="code" >Code
+			<input type="radio" value="play" name="play" >Play
+			<input type = "radio" value="music" name="music">Music
+			<br/>
+			<br/>
+			<button type="submit">Submit</button>
+		</form>
+	</body>
+	<script> 
+		function validateMe(){
+		const userEmail = document.getElementById('mail').value;
+		const userPwd = document.getElementById('pwd').value;
+					const emailRegex = /^[a-zA-Z0-9_%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z-]+{2,}$/;
+		if(!emailRegex.test(userEmail)){
+					alert("Wrong Email.");
+					return false;
+				}
+		if(userPwd.length<6){
+					alert("Password should be greater than 6 digits.");
+					return false;
+				}
+		const hobby = document.querySelector('input[name: "hobby"].checked');
+					if(!hobby){
+						alert("Select at lease one hobby.");
+						return false;
+					}
+		alert("You form is valid to submit");
+		return true;
+		}
+	</script>
+</html>
+

@@ -1,0 +1,19 @@
+<html>
+	<head>
+		<title>Canvas Example</title>
+	</head>
+	<body>
+		<canvas id="cv1" width="400" height="400" style="border: black 2px">
+		</canvas>
+	</body>
+	<script>
+		const canvas = document.getElementById('cv1').value;
+		const cv1 = canvas.getContext("2d");
+		cv1.beginPath();
+		cv1.arc(200, 200, 100, 0, 2*Math.PI)
+		cv1.fillStyle="blue";
+		cv1.fill();
+		cv1.stroke();
+	</script>
+</html>
+
