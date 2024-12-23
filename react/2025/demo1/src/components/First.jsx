@@ -1,5 +1,3 @@
-import "./App.css";
-
 function App() {
   const myName = "Abishek";
   var date = new Date().getFullYear();

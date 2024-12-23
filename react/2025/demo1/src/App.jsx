@@ -1,7 +1,11 @@
 import React from "react";
-
+import First from "./components/First";
 const App = () => {
-  return <div>App</div>;
+  return (
+    <div>
+      <First />
+    </div>
+  );
 };
 
 export default App;
