@@ -42,3 +42,9 @@ console.log();
 console.log();
 console.log();
 console.log();
+
+function hi() {
+  console.log("fun");
+}
+
+hi();
