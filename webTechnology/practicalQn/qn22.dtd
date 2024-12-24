@@ -1,5 +1,0 @@
-<!ELEMENT message (to, from, subject, body)>
-<!ELEMENT to (#PCDATA)>
-<!ELEMENT from (#PCDATA)>
-<!ELEMENT subject (#PCDATA)>
-<!ELEMENT body (#PCDATA)>

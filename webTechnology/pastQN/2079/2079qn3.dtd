@@ -1,8 +1,0 @@
-<!ELEMENT bookstore (book*, author*)>
-<!ELEMENT book (title?, price?)>
-<!ATTLIST book id ID #IMPLIED>
-<!ELEMENT title (#PCDATA)>
-<!ELEMENT author (first_name, last_name)>
-<!ELEMENT first_name (#PCDATA)>
-<!ELEMENT last_name (#PCDATA)>
-<!ELEMENT price (#PCDATA)> 
