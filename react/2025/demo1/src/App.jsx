@@ -6,7 +6,9 @@ import Fourth from "./components/Fourth";
 import Fifth from "./components/Fifth";
 import Sixth from "./components/Sixth";
 import Seventh from "./components/Seventh";
+import Eight from "./components/Eight";
 import Navbar from "./components/Navbar";
+import Form from "./components/Form";
 const App = () => {
   return (
     <div>
@@ -17,7 +19,9 @@ const App = () => {
       {/* <Fourth /> */}
       {/* <Fifth /> */}
       {/* <Sixth /> */}
-      <Seventh />
+      {/* <Seventh /> */}
+      {/* <Eight /> */}
+      <Form />
     </div>
   );
 };
