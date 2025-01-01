@@ -9,6 +9,8 @@ import Seventh from "./components/Seventh";
 import Eight from "./components/Eight";
 import Navbar from "./components/Navbar";
 import Form from "./components/Form";
+import Ninth from "./components/Ninth";
+import Tenth from "./components/Tenth";
 const App = () => {
   return (
     <div>
@@ -21,7 +23,10 @@ const App = () => {
       {/* <Sixth /> */}
       {/* <Seventh /> */}
       {/* <Eight /> */}
-      <Form />
+      {/* <Ninth /> */}
+      <Tenth />
+
+      {/* <Form /> */}
     </div>
   );
 };
