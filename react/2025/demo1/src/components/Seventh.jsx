@@ -1,14 +1,9 @@
-import React from "react";
-
-console.log(window);
-
-// var data = window.confirm("Hello");
-
-console.log(document);
-console.log(window.URL);
-
-const Seventh = () => {
-  return <div>Seventh</div>;
+const Seventh = ({ name }) => {
+  return (
+    <div>
+      <p>Name: {name}</p>
+    </div>
+  );
 };
 
 export default Seventh;

@@ -22,13 +22,15 @@ const App = () => {
       {/* <Fourth /> */}
       {/* <Fifth /> */}
       {/* <Sixth /> */}
-      {/* <Seventh /> */}
+      {/* <Seventh name="Hari" /> */}
+      {/* <Seventh name={"Ram"} /> */}
+
       {/* <Eight /> */}
       {/* <Ninth /> */}
       {/* <Tenth /> */}
-      <Eleventh name={"Abishek"} />
-      <Eleventh name={"Abinash"} />
-      <Eleventh name={"Abi"} />
+      {/* <Eleventh name={"Abishek"} /> */}
+      {/* <Eleventh name={"Abinash"} /> */}
+      {/* <Eleventh name={"Abi"} /> */}
 
       {/* <Form /> */}
     </div>
