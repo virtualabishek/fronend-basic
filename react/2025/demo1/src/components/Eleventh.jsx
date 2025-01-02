@@ -1,7 +1,16 @@
 import React from "react";
 
-const Eleventh = () => {
-  return <div>Eleventh</div>;
+// PROPS
+/* 
+higher Order Function/components
+*/
+
+const Eleventh = ({ name }) => {
+  return (
+    <>
+      <div className="p-4">Your name is: {name}</div>
+    </>
+  );
 };
 
 export default Eleventh;

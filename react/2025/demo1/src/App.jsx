@@ -11,6 +11,7 @@ import Navbar from "./components/Navbar";
 import Form from "./components/Form";
 import Ninth from "./components/Ninth";
 import Tenth from "./components/Tenth";
+import Eleventh from "./components/Eleventh";
 const App = () => {
   return (
     <div>
@@ -24,7 +25,10 @@ const App = () => {
       {/* <Seventh /> */}
       {/* <Eight /> */}
       {/* <Ninth /> */}
-      <Tenth />
+      {/* <Tenth /> */}
+      <Eleventh name={"Abishek"} />
+      <Eleventh name={"Abinash"} />
+      <Eleventh name={"Abi"} />
 
       {/* <Form /> */}
     </div>
