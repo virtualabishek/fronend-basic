@@ -1,13 +1,19 @@
 import React from "react";
 
-const Two = ({ prop }) => {
+const Two = ({ name, nickName, hobbies }) => {
+  // const { name, nickName, hobbies } = UserActivation;
+
   return (
     <div>
-      <p>Name: {props.name}</p>
-      <p>NickName: {props.nickName}</p>
-      <p>Hobbies: {props.hobbies}</p>
+      <p>
+        {name}: {nickName} and hobbies are {hobbies}
+      </p>
     </div>
   );
+};
+
+Two.defaultProps = {
+  hobbies: "Football, Gaming",
 };
 
 export default Two;
