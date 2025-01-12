@@ -9,6 +9,8 @@ import {
   MyButton,
 } from "./components/styles/Button.style";
 
+import Basic from "./components/Basic.jsx";
+
 const App = () => {
   return (
     <div>
@@ -24,7 +26,7 @@ const App = () => {
     //     <Breadcrumb.Item>Gorkha</Breadcrumb.Item>
     //     <Breadcrumb.Item>Sales</Breadcrumb.Item>
     //   </Breadcrumb> */}
-      <HeaderStyle>Hello</HeaderStyle>
+      {/* <HeaderStyle>Hello</HeaderStyle>
       <br />
       <HeaderStyle>Hello - 2</HeaderStyle>
       <br />
@@ -36,7 +38,8 @@ const App = () => {
       </MyButton>
       <MyButton color="red" backgroundColor="yellow">
         Hello
-      </MyButton>
+      </MyButton> */}
+      <Basic />
     </div>
   );
 };
